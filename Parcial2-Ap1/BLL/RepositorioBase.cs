@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Parcial2_Ap1.DAL;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;

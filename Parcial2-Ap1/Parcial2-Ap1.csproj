@@ -71,9 +71,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UI\Consultas\ConsultaForm.cs">
       <SubType>Form</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="UI\Consultas\ConsultaForm.Designer.cs">
       <DependentUpon>ConsultaForm.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="UI\Registros\RCategoriasForm.cs">
       <SubType>Form</SubType>
@@ -87,6 +89,9 @@
     <Compile Include="UI\Registros\RegistroForm.Designer.cs">
       <DependentUpon>RegistroForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -96,6 +101,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\Consultas\ConsultaForm.resx">
+      <DependentUpon>ConsultaForm.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\RCategoriasForm.resx">
+      <DependentUpon>RCategoriasForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\RegistroForm.resx">
       <DependentUpon>RegistroForm.cs</DependentUpon>
     </EmbeddedResource>

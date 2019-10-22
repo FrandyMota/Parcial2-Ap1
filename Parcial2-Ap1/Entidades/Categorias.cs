@@ -18,5 +18,6 @@ namespace Parcial2_Ap1.Entidades
             CategoriaId = 0;
             Descripcion = string.Empty;
         }
+
     }
  }
