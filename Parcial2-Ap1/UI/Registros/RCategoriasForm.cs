@@ -137,5 +137,9 @@ namespace Parcial2_Ap1.UI.Registros
                 MyerrorProvider.SetError(IdnumericUpDown, "No se puede eliminar un registro que no existe");
         }
 
+        private void RCategoriasForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

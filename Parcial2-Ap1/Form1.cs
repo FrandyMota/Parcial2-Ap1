@@ -25,10 +25,6 @@ namespace Parcial2_Ap1
             frm.Show();
         }
 
-        private void consultasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void consultaToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -44,9 +40,6 @@ namespace Parcial2_Ap1
             frm.Show();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
+  
     }
 }

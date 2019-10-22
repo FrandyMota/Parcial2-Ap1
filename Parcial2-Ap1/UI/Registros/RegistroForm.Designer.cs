@@ -41,7 +41,7 @@
             this.CantidadColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ImporteColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TotaltextBox = new System.Windows.Forms.TextBox();
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Nuevobutton = new System.Windows.Forms.Button();
@@ -49,20 +49,22 @@
             this.EstudiantetextBox = new System.Windows.Forms.TextBox();
             this.CategoriagroupBox = new System.Windows.Forms.GroupBox();
             this.Sbutton = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.ImportetextBox = new System.Windows.Forms.TextBox();
             this.Importelabel = new System.Windows.Forms.Label();
-            this.PreciotextBox = new System.Windows.Forms.TextBox();
             this.Preciolabel = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.Cantidadlabel = new System.Windows.Forms.Label();
             this.Serviciolabel = new System.Windows.Forms.Label();
-            this.ServiciocomboBox = new System.Windows.Forms.ComboBox();
+            this.CategoriacomboBox = new System.Windows.Forms.ComboBox();
             this.MyerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.IdnumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.CantidadnumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.PrecionumericUpDown = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.DetalledataGridView)).BeginInit();
             this.CategoriagroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CantidadnumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrecionumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // Idlabel
@@ -154,12 +156,12 @@
             this.ImporteColumn.HeaderText = "Importe";
             this.ImporteColumn.Name = "ImporteColumn";
             // 
-            // textBox1
+            // TotaltextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(491, 368);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 11;
+            this.TotaltextBox.Location = new System.Drawing.Point(491, 368);
+            this.TotaltextBox.Name = "TotaltextBox";
+            this.TotaltextBox.Size = new System.Drawing.Size(100, 20);
+            this.TotaltextBox.TabIndex = 11;
             // 
             // Eliminarbutton
             // 
@@ -172,6 +174,7 @@
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Eliminarbutton.UseVisualStyleBackColor = true;
+            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
             // 
             // Guardarbutton
             // 
@@ -184,6 +187,7 @@
             this.Guardarbutton.Text = "Guardar";
             this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Guardarbutton.UseVisualStyleBackColor = true;
+            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
             // Nuevobutton
             // 
@@ -196,6 +200,7 @@
             this.Nuevobutton.Text = "Nuevo";
             this.Nuevobutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Nuevobutton.UseVisualStyleBackColor = true;
+            this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
             // 
             // Estudiantelabel
             // 
@@ -215,15 +220,15 @@
             // 
             // CategoriagroupBox
             // 
+            this.CategoriagroupBox.Controls.Add(this.PrecionumericUpDown);
+            this.CategoriagroupBox.Controls.Add(this.CantidadnumericUpDown);
             this.CategoriagroupBox.Controls.Add(this.Sbutton);
-            this.CategoriagroupBox.Controls.Add(this.textBox4);
+            this.CategoriagroupBox.Controls.Add(this.ImportetextBox);
             this.CategoriagroupBox.Controls.Add(this.Importelabel);
-            this.CategoriagroupBox.Controls.Add(this.PreciotextBox);
             this.CategoriagroupBox.Controls.Add(this.Preciolabel);
-            this.CategoriagroupBox.Controls.Add(this.textBox3);
             this.CategoriagroupBox.Controls.Add(this.Cantidadlabel);
             this.CategoriagroupBox.Controls.Add(this.Serviciolabel);
-            this.CategoriagroupBox.Controls.Add(this.ServiciocomboBox);
+            this.CategoriagroupBox.Controls.Add(this.CategoriacomboBox);
             this.CategoriagroupBox.Location = new System.Drawing.Point(25, 110);
             this.CategoriagroupBox.Name = "CategoriagroupBox";
             this.CategoriagroupBox.Size = new System.Drawing.Size(566, 100);
@@ -239,13 +244,15 @@
             this.Sbutton.TabIndex = 8;
             this.Sbutton.Text = "+";
             this.Sbutton.UseVisualStyleBackColor = true;
+            this.Sbutton.Click += new System.EventHandler(this.Sbutton_Click);
             // 
-            // textBox4
+            // ImportetextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(387, 42);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 7;
+            this.ImportetextBox.Location = new System.Drawing.Point(387, 42);
+            this.ImportetextBox.Name = "ImportetextBox";
+            this.ImportetextBox.Size = new System.Drawing.Size(100, 20);
+            this.ImportetextBox.TabIndex = 7;
+            this.ImportetextBox.TextChanged += new System.EventHandler(this.ImportetextBox_TextChanged);
             // 
             // Importelabel
             // 
@@ -256,13 +263,6 @@
             this.Importelabel.TabIndex = 6;
             this.Importelabel.Text = "Importe";
             // 
-            // PreciotextBox
-            // 
-            this.PreciotextBox.Location = new System.Drawing.Point(281, 42);
-            this.PreciotextBox.Name = "PreciotextBox";
-            this.PreciotextBox.Size = new System.Drawing.Size(100, 20);
-            this.PreciotextBox.TabIndex = 5;
-            // 
             // Preciolabel
             // 
             this.Preciolabel.AutoSize = true;
@@ -271,13 +271,6 @@
             this.Preciolabel.Size = new System.Drawing.Size(37, 13);
             this.Preciolabel.TabIndex = 4;
             this.Preciolabel.Text = "Precio";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(157, 41);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 3;
             // 
             // Cantidadlabel
             // 
@@ -297,13 +290,13 @@
             this.Serviciolabel.TabIndex = 1;
             this.Serviciolabel.Text = "Servicio";
             // 
-            // ServiciocomboBox
+            // CategoriacomboBox
             // 
-            this.ServiciocomboBox.FormattingEnabled = true;
-            this.ServiciocomboBox.Location = new System.Drawing.Point(7, 41);
-            this.ServiciocomboBox.Name = "ServiciocomboBox";
-            this.ServiciocomboBox.Size = new System.Drawing.Size(121, 21);
-            this.ServiciocomboBox.TabIndex = 0;
+            this.CategoriacomboBox.FormattingEnabled = true;
+            this.CategoriacomboBox.Location = new System.Drawing.Point(7, 41);
+            this.CategoriacomboBox.Name = "CategoriacomboBox";
+            this.CategoriacomboBox.Size = new System.Drawing.Size(121, 21);
+            this.CategoriacomboBox.TabIndex = 0;
             // 
             // MyerrorProvider
             // 
@@ -315,6 +308,22 @@
             this.IdnumericUpDown.Name = "IdnumericUpDown";
             this.IdnumericUpDown.Size = new System.Drawing.Size(120, 20);
             this.IdnumericUpDown.TabIndex = 30;
+            // 
+            // CantidadnumericUpDown
+            // 
+            this.CantidadnumericUpDown.Location = new System.Drawing.Point(157, 41);
+            this.CantidadnumericUpDown.Name = "CantidadnumericUpDown";
+            this.CantidadnumericUpDown.Size = new System.Drawing.Size(99, 20);
+            this.CantidadnumericUpDown.TabIndex = 9;
+            this.CantidadnumericUpDown.ValueChanged += new System.EventHandler(this.CantidadnumericUpDown_ValueChanged);
+            // 
+            // PrecionumericUpDown
+            // 
+            this.PrecionumericUpDown.Location = new System.Drawing.Point(283, 41);
+            this.PrecionumericUpDown.Name = "PrecionumericUpDown";
+            this.PrecionumericUpDown.Size = new System.Drawing.Size(98, 20);
+            this.PrecionumericUpDown.TabIndex = 10;
+            this.PrecionumericUpDown.ValueChanged += new System.EventHandler(this.PrecionumericUpDown_ValueChanged);
             // 
             // RegistroForm
             // 
@@ -328,7 +337,7 @@
             this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Nuevobutton);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TotaltextBox);
             this.Controls.Add(this.DetalledataGridView);
             this.Controls.Add(this.FechadateTimePicker);
             this.Controls.Add(this.Removerbutton);
@@ -338,11 +347,14 @@
             this.Controls.Add(this.Idlabel);
             this.Name = "RegistroForm";
             this.Text = "Registro";
+            this.Load += new System.EventHandler(this.RegistroForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DetalledataGridView)).EndInit();
             this.CategoriagroupBox.ResumeLayout(false);
             this.CategoriagroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CantidadnumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrecionumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -357,7 +369,7 @@
         private System.Windows.Forms.Button Removerbutton;
         private System.Windows.Forms.DateTimePicker FechadateTimePicker;
         private System.Windows.Forms.DataGridView DetalledataGridView;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TotaltextBox;
         private System.Windows.Forms.Button Eliminarbutton;
         private System.Windows.Forms.Button Guardarbutton;
         private System.Windows.Forms.Button Nuevobutton;
@@ -369,15 +381,15 @@
         private System.Windows.Forms.TextBox EstudiantetextBox;
         private System.Windows.Forms.GroupBox CategoriagroupBox;
         private System.Windows.Forms.Button Sbutton;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox ImportetextBox;
         private System.Windows.Forms.Label Importelabel;
-        private System.Windows.Forms.TextBox PreciotextBox;
         private System.Windows.Forms.Label Preciolabel;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label Cantidadlabel;
         private System.Windows.Forms.Label Serviciolabel;
-        private System.Windows.Forms.ComboBox ServiciocomboBox;
+        private System.Windows.Forms.ComboBox CategoriacomboBox;
         private System.Windows.Forms.ErrorProvider MyerrorProvider;
         private System.Windows.Forms.NumericUpDown IdnumericUpDown;
+        private System.Windows.Forms.NumericUpDown PrecionumericUpDown;
+        private System.Windows.Forms.NumericUpDown CantidadnumericUpDown;
     }
 }

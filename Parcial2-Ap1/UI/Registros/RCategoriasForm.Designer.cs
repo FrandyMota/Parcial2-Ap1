@@ -143,7 +143,7 @@
             this.Controls.Add(this.label1);
             this.Name = "RCategoriasForm";
             this.Text = "RCategoriasForm";
-//            this.Load += new System.EventHandler(this.RCategoriasForm_Load);
+            this.Load += new System.EventHandler(this.RCategoriasForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).EndInit();
             this.ResumeLayout(false);
