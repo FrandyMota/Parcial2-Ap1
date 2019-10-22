@@ -144,7 +144,7 @@
             this.Controls.Add(this.Hastalabel);
             this.Controls.Add(this.Desdelabel);
             this.Name = "ConsultaForm";
-            this.Text = "Consulta";
+            this.Text = "Consulta Estudiante";
             ((System.ComponentModel.ISupportInitialize)(this.ConsultadataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

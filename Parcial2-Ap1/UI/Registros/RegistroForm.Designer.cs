@@ -48,6 +48,8 @@
             this.Estudiantelabel = new System.Windows.Forms.Label();
             this.EstudiantetextBox = new System.Windows.Forms.TextBox();
             this.CategoriagroupBox = new System.Windows.Forms.GroupBox();
+            this.PrecionumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.CantidadnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.Sbutton = new System.Windows.Forms.Button();
             this.ImportetextBox = new System.Windows.Forms.TextBox();
             this.Importelabel = new System.Windows.Forms.Label();
@@ -57,14 +59,12 @@
             this.CategoriacomboBox = new System.Windows.Forms.ComboBox();
             this.MyerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.IdnumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.CantidadnumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.PrecionumericUpDown = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.DetalledataGridView)).BeginInit();
             this.CategoriagroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PrecionumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CantidadnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CantidadnumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PrecionumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // Idlabel
@@ -236,6 +236,22 @@
             this.CategoriagroupBox.TabStop = false;
             this.CategoriagroupBox.Text = "Categoria";
             // 
+            // PrecionumericUpDown
+            // 
+            this.PrecionumericUpDown.Location = new System.Drawing.Point(283, 41);
+            this.PrecionumericUpDown.Name = "PrecionumericUpDown";
+            this.PrecionumericUpDown.Size = new System.Drawing.Size(98, 20);
+            this.PrecionumericUpDown.TabIndex = 10;
+            this.PrecionumericUpDown.ValueChanged += new System.EventHandler(this.PrecionumericUpDown_ValueChanged);
+            // 
+            // CantidadnumericUpDown
+            // 
+            this.CantidadnumericUpDown.Location = new System.Drawing.Point(157, 41);
+            this.CantidadnumericUpDown.Name = "CantidadnumericUpDown";
+            this.CantidadnumericUpDown.Size = new System.Drawing.Size(99, 20);
+            this.CantidadnumericUpDown.TabIndex = 9;
+            this.CantidadnumericUpDown.ValueChanged += new System.EventHandler(this.CantidadnumericUpDown_ValueChanged);
+            // 
             // Sbutton
             // 
             this.Sbutton.Location = new System.Drawing.Point(493, 38);
@@ -309,22 +325,6 @@
             this.IdnumericUpDown.Size = new System.Drawing.Size(120, 20);
             this.IdnumericUpDown.TabIndex = 30;
             // 
-            // CantidadnumericUpDown
-            // 
-            this.CantidadnumericUpDown.Location = new System.Drawing.Point(157, 41);
-            this.CantidadnumericUpDown.Name = "CantidadnumericUpDown";
-            this.CantidadnumericUpDown.Size = new System.Drawing.Size(99, 20);
-            this.CantidadnumericUpDown.TabIndex = 9;
-            this.CantidadnumericUpDown.ValueChanged += new System.EventHandler(this.CantidadnumericUpDown_ValueChanged);
-            // 
-            // PrecionumericUpDown
-            // 
-            this.PrecionumericUpDown.Location = new System.Drawing.Point(283, 41);
-            this.PrecionumericUpDown.Name = "PrecionumericUpDown";
-            this.PrecionumericUpDown.Size = new System.Drawing.Size(98, 20);
-            this.PrecionumericUpDown.TabIndex = 10;
-            this.PrecionumericUpDown.ValueChanged += new System.EventHandler(this.PrecionumericUpDown_ValueChanged);
-            // 
             // RegistroForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -346,15 +346,15 @@
             this.Controls.Add(this.Fechalabel);
             this.Controls.Add(this.Idlabel);
             this.Name = "RegistroForm";
-            this.Text = "Registro";
+            this.Text = "RegistroEstudiantes";
             this.Load += new System.EventHandler(this.RegistroForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DetalledataGridView)).EndInit();
             this.CategoriagroupBox.ResumeLayout(false);
             this.CategoriagroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PrecionumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CantidadnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CantidadnumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PrecionumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
